@@ -6,11 +6,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareRegular.ttf">
+            <string>NanumSquareR</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--가자 바다로-->
         <scene sceneID="tne-QT-ifu">
@@ -24,27 +26,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kv3-r7-k0r">
-                                <rect key="frame" x="286" y="613" width="73" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="6zM-re-xuI"/>
-                                    <constraint firstAttribute="width" constant="73" id="m0p-kA-z3B"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="위성사진"/>
-                                <connections>
-                                    <segue destination="93X-ud-S05" kind="show" id="TUf-eo-L1e"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Korea.png" translatesAutoresizingMaskIntoConstraints="NO" id="5nE-C5-un5">
-                                <rect key="frame" x="0.0" y="64" width="375" height="541"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Korea.png" translatesAutoresizingMaskIntoConstraints="NO" id="5nE-C5-un5">
+                                <rect key="frame" x="0.0" y="0.0" width="484" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Us9-PX-47n">
-                                <rect key="frame" x="73" y="171" width="43" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="43" id="16Y-lT-zBa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Us9-PX-47n">
+                                <rect key="frame" x="105" y="141" width="43" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <state key="normal" title="인천">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -52,9 +41,10 @@
                                     <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f6h-Qg-u61"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hjj-3o-w8q">
-                                <rect key="frame" x="73" y="208" width="43" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hjj-3o-w8q">
+                                <rect key="frame" x="121" y="169" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <state key="normal" title="화성">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -62,12 +52,252 @@
                                     <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Zd-l3-wHv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e49-1V-kge">
-                                <rect key="frame" x="45" y="151" width="50" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="rgY-3x-pTW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IN3-A9-wBt">
+                                <rect key="frame" x="133" y="193" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="당진">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OFx-MV-PA5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8N-wr-FRX">
+                                <rect key="frame" x="97" y="200" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="서산">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LMX-NF-5ak"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKT-EV-CyX">
+                                <rect key="frame" x="89" y="228" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="태안">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jzV-ir-oNU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57O-SR-yFT">
+                                <rect key="frame" x="274" y="436" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="거제">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s9e-Mq-hoh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovL-p5-EEJ">
+                                <rect key="frame" x="251" y="454" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="통영">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PEr-9K-7fL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etE-Yw-UZT">
+                                <rect key="frame" x="197" y="431" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="광양">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oB2-dK-kLY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAf-DH-B1p">
+                                <rect key="frame" x="245" y="412" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="창원">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gRP-E4-qDj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwh-5s-n7K">
+                                <rect key="frame" x="216" y="455" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="남해">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H6Y-S9-wt6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3f-6m-JXk">
+                                <rect key="frame" x="189" y="463" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="여수">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="83W-9z-GPI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68z-K5-LxZ">
+                                <rect key="frame" x="163" y="475" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="고흥">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rfS-Qa-xL0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWb-lR-zw0">
+                                <rect key="frame" x="148" y="495" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="완도">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FKR-Wa-Jb3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tiz-fP-mVs">
+                                <rect key="frame" x="115" y="502" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="해남">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kBH-Sr-RQ6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxM-0h-7Lk">
+                                <rect key="frame" x="89" y="487" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="진도">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MQx-ed-Vel"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34S-W4-WiT">
+                                <rect key="frame" x="104" y="454" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="목포">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bWZ-Oq-FFi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERy-rc-HlY">
+                                <rect key="frame" x="97" y="422" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="무안">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z0I-0h-ubv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOc-kE-44B">
+                                <rect key="frame" x="105" y="379" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="영광">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xjW-9X-wco"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0a-cE-71H">
+                                <rect key="frame" x="121" y="352" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="부안">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="niR-MW-dtQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mh4-4V-FrD">
+                                <rect key="frame" x="133" y="330" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="김제">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1tO-hw-6gR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hj6-Kp-BK7">
+                                <rect key="frame" x="118" y="313" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="군산">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="itW-rc-ssI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9q-Vl-veW">
+                                <rect key="frame" x="110" y="293" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="서천">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6mh-qb-Jp7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eK4-vy-Izk">
+                                <rect key="frame" x="104" y="264" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="보령">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EDj-AO-G0s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JU5-pY-CND">
+                                <rect key="frame" x="115" y="589" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="제주">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GhB-fP-hpV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e49-1V-kge">
+                                <rect key="frame" x="80" y="122" width="50" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <state key="normal" title="강화도">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -75,12 +305,38 @@
                                     <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFb-8H-dem"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzR-xP-Mel">
-                                <rect key="frame" x="188" y="81" width="86" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="86" id="MWf-cJ-FI8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kv3-r7-k0r">
+                                <rect key="frame" x="286" y="613" width="73" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="위성사진"/>
+                                <connections>
+                                    <segue destination="93X-ud-S05" kind="show" id="TUf-eo-L1e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHh-Ma-5l7">
+                                <rect key="frame" x="104" y="624" width="50" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="서귀포">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zig-k7-Y8H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dW6-kV-OPs">
+                                <rect key="frame" x="18" y="11" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="About"/>
+                                <connections>
+                                    <segue destination="S3O-Xf-4eh" kind="show" id="yXd-5B-y6p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzR-xP-Mel">
+                                <rect key="frame" x="234" y="28" width="86" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <state key="normal" title="고성(강원)">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -88,39 +344,243 @@
                                     <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KUU-f0-JiD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFP-49-Yxj">
+                                <rect key="frame" x="230" y="57" width="86" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="속초">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4zo-Fb-gAT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DK2-d6-h8W">
+                                <rect key="frame" x="237" y="77" width="86" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="양양">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R4j-u9-b28"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vs7-MT-SqR">
+                                <rect key="frame" x="247" y="99" width="86" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="강릉">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eet-9g-ntR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uC6-pj-bW4">
+                                <rect key="frame" x="260" y="120" width="86" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="동해">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bcX-QH-iva"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OK-gv-ZxQ">
+                                <rect key="frame" x="273" y="150" width="86" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="삼척">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XF0-pk-YLl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5to-rL-uGO">
+                                <rect key="frame" x="279" y="193" width="86" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="울진">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R9K-Yj-M9N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDa-ML-Rpq">
+                                <rect key="frame" x="286" y="244" width="86" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="영덕">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8BA-Vn-jbd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpa-CV-pEM">
+                                <rect key="frame" x="286" y="302" width="86" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="포항">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k3E-PU-lAl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gu1-4h-kr9">
+                                <rect key="frame" x="279" y="334" width="86" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="경주">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="THB-uC-3Ab"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tk-DI-jf2">
+                                <rect key="frame" x="279" y="365" width="86" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="울산">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vd2-UF-yW0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUO-9c-nLu">
+                                <rect key="frame" x="286" y="408" width="55" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="부산">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SelectLocate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xz4-SC-hMg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="지역을 선택하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q4-lz-EiH">
+                                <rect key="frame" x="126" y="11" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.75077331852791884" green="0.75077331852791884" blue="0.75077331852791884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="LzR-xP-Mel" secondAttribute="trailing" constant="85" id="2rH-5P-DBU"/>
-                            <constraint firstItem="Hjj-3o-w8q" firstAttribute="top" secondItem="Us9-PX-47n" secondAttribute="bottom" constant="6" id="Gly-TM-cnP"/>
-                            <constraint firstItem="Hjj-3o-w8q" firstAttribute="top" secondItem="e49-1V-kge" secondAttribute="bottom" constant="26" id="INX-6u-OGp"/>
-                            <constraint firstItem="5nE-C5-un5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NDI-zB-tK7"/>
-                            <constraint firstItem="Us9-PX-47n" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="107" id="Q1q-eV-5Zo"/>
-                            <constraint firstAttribute="bottom" secondItem="Kv3-r7-k0r" secondAttribute="bottom" constant="20" symbolic="YES" id="R0k-bl-zdf"/>
-                            <constraint firstItem="5nE-C5-un5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Rvr-7q-T4B"/>
-                            <constraint firstAttribute="trailing" secondItem="5nE-C5-un5" secondAttribute="trailing" id="WAi-Kf-GWq"/>
-                            <constraint firstItem="Us9-PX-47n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="57" id="Xsx-Ru-Vqc"/>
-                            <constraint firstItem="Us9-PX-47n" firstAttribute="leading" secondItem="Hjj-3o-w8q" secondAttribute="leading" id="ZTR-kL-rGV"/>
-                            <constraint firstItem="LzR-xP-Mel" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="avK-gB-cVy"/>
-                            <constraint firstItem="e49-1V-kge" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="29" id="dph-nS-Xhs"/>
-                            <constraint firstItem="e49-1V-kge" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="87" id="f4N-Bw-2FK"/>
-                            <constraint firstItem="Us9-PX-47n" firstAttribute="trailing" secondItem="Hjj-3o-w8q" secondAttribute="trailing" id="gkX-rd-8Kj"/>
-                            <constraint firstItem="Kv3-r7-k0r" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mkd-zf-pqU"/>
-                            <constraint firstItem="Kv3-r7-k0r" firstAttribute="top" secondItem="5nE-C5-un5" secondAttribute="bottom" constant="8" symbolic="YES" id="oeI-QN-nPZ"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="가자 바다로" id="21Q-6Q-Xfa"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outletCollection property="locateButtons" destination="Us9-PX-47n" collectionClass="NSMutableArray" id="OCD-Kx-Bc0"/>
                         <outletCollection property="locateButtons" destination="e49-1V-kge" collectionClass="NSMutableArray" id="Wf6-wc-ceP"/>
-                        <outletCollection property="locateButtons" destination="Hjj-3o-w8q" collectionClass="NSMutableArray" id="yOF-mE-7Ga"/>
                         <outletCollection property="locateButtons" destination="LzR-xP-Mel" collectionClass="NSMutableArray" id="k9g-mG-uuv"/>
+                        <outletCollection property="locateButtons" destination="Hjj-3o-w8q" collectionClass="NSMutableArray" id="yOF-mE-7Ga"/>
+                        <outletCollection property="locateButtons" destination="IN3-A9-wBt" collectionClass="NSMutableArray" id="uYw-dB-etj"/>
+                        <outletCollection property="locateButtons" destination="f8N-wr-FRX" collectionClass="NSMutableArray" id="5ud-eb-6T9"/>
+                        <outletCollection property="locateButtons" destination="JU5-pY-CND" collectionClass="NSMutableArray" id="asd-DZ-XYJ"/>
+                        <outletCollection property="locateButtons" destination="rHh-Ma-5l7" collectionClass="NSMutableArray" id="nsb-t0-YhN"/>
+                        <outletCollection property="locateButtons" destination="wFP-49-Yxj" collectionClass="NSMutableArray" id="L0X-5i-zPT"/>
+                        <outletCollection property="locateButtons" destination="DK2-d6-h8W" collectionClass="NSMutableArray" id="Olb-PO-FhU"/>
+                        <outletCollection property="locateButtons" destination="vs7-MT-SqR" collectionClass="NSMutableArray" id="IO3-3k-je5"/>
+                        <outletCollection property="locateButtons" destination="uC6-pj-bW4" collectionClass="NSMutableArray" id="tR5-wg-hWm"/>
+                        <outletCollection property="locateButtons" destination="5OK-gv-ZxQ" collectionClass="NSMutableArray" id="GSS-ao-N2s"/>
+                        <outletCollection property="locateButtons" destination="5to-rL-uGO" collectionClass="NSMutableArray" id="cT5-FV-K6s"/>
+                        <outletCollection property="locateButtons" destination="vDa-ML-Rpq" collectionClass="NSMutableArray" id="bkJ-eA-SfF"/>
+                        <outletCollection property="locateButtons" destination="Mpa-CV-pEM" collectionClass="NSMutableArray" id="L6P-9f-TVN"/>
+                        <outletCollection property="locateButtons" destination="gu1-4h-kr9" collectionClass="NSMutableArray" id="62y-53-ROi"/>
+                        <outletCollection property="locateButtons" destination="6tk-DI-jf2" collectionClass="NSMutableArray" id="Qeo-ZP-bcf"/>
+                        <outletCollection property="locateButtons" destination="CUO-9c-nLu" collectionClass="NSMutableArray" id="WyG-QX-TVM"/>
+                        <outletCollection property="locateButtons" destination="tAf-DH-B1p" collectionClass="NSMutableArray" id="iby-zu-Sby"/>
+                        <outletCollection property="locateButtons" destination="57O-SR-yFT" collectionClass="NSMutableArray" id="qCB-aR-GIv"/>
+                        <outletCollection property="locateButtons" destination="ovL-p5-EEJ" collectionClass="NSMutableArray" id="Ofz-Jn-rUz"/>
+                        <outletCollection property="locateButtons" destination="etE-Yw-UZT" collectionClass="NSMutableArray" id="mop-JA-2vn"/>
+                        <outletCollection property="locateButtons" destination="d3f-6m-JXk" collectionClass="NSMutableArray" id="7WJ-pW-WRC"/>
+                        <outletCollection property="locateButtons" destination="68z-K5-LxZ" collectionClass="NSMutableArray" id="cBf-h2-J0B"/>
+                        <outletCollection property="locateButtons" destination="VWb-lR-zw0" collectionClass="NSMutableArray" id="EUa-2t-K9E"/>
+                        <outletCollection property="locateButtons" destination="Tiz-fP-mVs" collectionClass="NSMutableArray" id="fwK-OU-hxW"/>
+                        <outletCollection property="locateButtons" destination="YxM-0h-7Lk" collectionClass="NSMutableArray" id="yfd-do-duh"/>
+                        <outletCollection property="locateButtons" destination="34S-W4-WiT" collectionClass="NSMutableArray" id="XKh-V9-y13"/>
+                        <outletCollection property="locateButtons" destination="ERy-rc-HlY" collectionClass="NSMutableArray" id="Kq0-5F-V0A"/>
+                        <outletCollection property="locateButtons" destination="tOc-kE-44B" collectionClass="NSMutableArray" id="wqV-hs-y7E"/>
+                        <outletCollection property="locateButtons" destination="d0a-cE-71H" collectionClass="NSMutableArray" id="lTC-gI-Rl3"/>
+                        <outletCollection property="locateButtons" destination="mh4-4V-FrD" collectionClass="NSMutableArray" id="e35-IB-h19"/>
+                        <outletCollection property="locateButtons" destination="Hj6-Kp-BK7" collectionClass="NSMutableArray" id="EFs-Qh-9NJ"/>
+                        <outletCollection property="locateButtons" destination="Y9q-Vl-veW" collectionClass="NSMutableArray" id="zMR-YP-WLg"/>
+                        <outletCollection property="locateButtons" destination="eK4-vy-Izk" collectionClass="NSMutableArray" id="XQm-gq-ID6"/>
+                        <outletCollection property="locateButtons" destination="JKT-EV-CyX" collectionClass="NSMutableArray" id="4xd-EZ-p0k"/>
+                        <outletCollection property="locateButtons" destination="Pwh-5s-n7K" collectionClass="NSMutableArray" id="tgg-bE-hpU"/>
                         <segue destination="qjL-Sb-bCA" kind="show" identifier="showDateView" id="IdE-yj-l37"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="845.60000000000002" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hw1-JT-fjr">
+            <objects>
+                <viewController id="S3O-Xf-4eh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gVx-tp-4q6"/>
+                        <viewControllerLayoutGuide type="bottom" id="4dF-UK-p11"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B3c-jh-rWM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqK-bQ-axk">
+                                <rect key="frame" x="24" y="20" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="뒤로"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="qfi-qT-ZCo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="가자 바다로" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJE-G2-wO1">
+                                <rect key="frame" x="93" y="73" width="188" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JWX-n7-Xky">
+                                <rect key="frame" x="38" y="179" width="299" height="397"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">이 앱에는 네이버에서 제공한 나눔글꼴이 적용되어 있습니다.
+ 지도는 위키백과의 대한민국 지도를 사용했습니다. 
+이 앱에 사용된 Open API 정보 
+
+ - (신)동네예보 정보조회 서비스
+    제공기관 : 기상청
+
+ - 위성영상 정보조회 서비스
+    제공기관 : 기상청
+
+ - 출몰시각 정보제공 서비스
+   제공기관: 한국천문연구원
+
+이 앱은 실제 날씨와 오차가 있을 수 있습니다.
+</string>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77647058823529413" green="0.92549019607843142" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mhV-so-Mb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="903.59820089955031"/>
         </scene>
         <!--천문기상-->
         <scene sceneID="4gk-6C-RS3">
@@ -134,85 +594,157 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3w-nu-n3E">
-                                <rect key="frame" x="37" y="156" width="276" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일출" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r95-kK-g7T">
-                                <rect key="frame" x="37" y="207" width="276" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일몰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGn-rW-GGP">
-                                <rect key="frame" x="37" y="268" width="276" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="월출" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHJ-cf-ALg">
-                                <rect key="frame" x="37" y="329" width="276" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="월몰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFI-2O-pD7">
-                                <rect key="frame" x="37" y="379" width="276" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="항해박명(아침)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5R-aZ-uBk">
-                                <rect key="frame" x="37" y="431" width="276" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="항해박명(저녁)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyj-ab-ZKK">
-                                <rect key="frame" x="37" y="485" width="276" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMP-H9-eJN">
-                                <rect key="frame" x="281" y="608" width="61" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="61" id="7Q1-4d-2yN"/>
-                                </constraints>
-                                <state key="normal" title="예보조회"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMP-H9-eJN">
+                                <rect key="frame" x="289" y="28" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="날씨">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="FY7-lc-Fbb" kind="show" identifier="showForecast" id="wpP-S3-nmH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ds0-Tj-P5h">
+                                <rect key="frame" x="28" y="28" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="뒤로">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="B1x-AK-eCn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="천문기상" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQN-WH-xvP">
+                                <rect key="frame" x="139" y="12" width="97" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="지역" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3w-nu-n3E">
+                                <rect key="frame" x="111" y="166" width="162" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="일출" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r95-kK-g7T">
+                                <rect key="frame" x="39" y="265" width="137" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="일몰" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGn-rW-GGP">
+                                <rect key="frame" x="199" y="267" width="137" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="월출" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHJ-cf-ALg">
+                                <rect key="frame" x="52" y="360" width="109" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="월몰" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFI-2O-pD7">
+                                <rect key="frame" x="217" y="358" width="103" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="항해박명(아침)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5R-aZ-uBk">
+                                <rect key="frame" x="53" y="458" width="112" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame.png" translatesAutoresizingMaskIntoConstraints="NO" id="SXs-Nl-95h">
+                                <rect key="frame" x="103" y="154" width="176" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame.png" translatesAutoresizingMaskIntoConstraints="NO" id="DEw-8Y-Ffz">
+                                <rect key="frame" x="52" y="231" width="111" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Y7-AQ-uv3">
+                                <rect key="frame" x="52" y="326" width="111" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame.png" translatesAutoresizingMaskIntoConstraints="NO" id="bkb-bl-fI2">
+                                <rect key="frame" x="212" y="326" width="111" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame.png" translatesAutoresizingMaskIntoConstraints="NO" id="oR6-Yj-Nm0">
+                                <rect key="frame" x="212" y="231" width="111" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="일몰" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nl-9d-Dii">
+                                <rect key="frame" x="251" y="236" width="33" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="월출" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3w-CN-UUX">
+                                <rect key="frame" x="86" y="331" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="항해박명(아침)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cc-m6-c0C">
+                                <rect key="frame" x="55" y="429" width="107" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="항해박명(저녁)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SN-5y-YzX">
+                                <rect key="frame" x="216" y="429" width="107" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="월몰" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2L-gJ-HCf">
+                                <rect key="frame" x="247" y="331" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="항해박명(저녁)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyj-ab-ZKK">
+                                <rect key="frame" x="212" y="458" width="114" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame.png" translatesAutoresizingMaskIntoConstraints="NO" id="DqC-ot-Ggv">
+                                <rect key="frame" x="46" y="419" width="125" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame.png" translatesAutoresizingMaskIntoConstraints="NO" id="QxY-x9-KWN">
+                                <rect key="frame" x="206" y="419" width="125" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="일출" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWQ-hL-VJf">
+                                <rect key="frame" x="89" y="236" width="36" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="FHJ-cf-ALg" firstAttribute="leading" secondItem="TFI-2O-pD7" secondAttribute="leading" id="30F-Yt-n41"/>
-                            <constraint firstItem="r95-kK-g7T" firstAttribute="top" secondItem="n3w-nu-n3E" secondAttribute="bottom" constant="30" id="3ta-VA-Fzg"/>
-                            <constraint firstItem="s5R-aZ-uBk" firstAttribute="leading" secondItem="yyj-ab-ZKK" secondAttribute="leading" id="4DK-yP-j1l"/>
-                            <constraint firstItem="s5R-aZ-uBk" firstAttribute="top" secondItem="TFI-2O-pD7" secondAttribute="bottom" constant="31" id="4fU-0g-7Na"/>
-                            <constraint firstItem="r95-kK-g7T" firstAttribute="trailing" secondItem="uGn-rW-GGP" secondAttribute="trailing" id="9dE-X2-RnL"/>
-                            <constraint firstItem="n3w-nu-n3E" firstAttribute="trailing" secondItem="r95-kK-g7T" secondAttribute="trailing" id="DAc-7I-CEV"/>
-                            <constraint firstItem="n3w-nu-n3E" firstAttribute="leading" secondItem="r95-kK-g7T" secondAttribute="leading" id="EFd-O1-elO"/>
-                            <constraint firstItem="uGn-rW-GGP" firstAttribute="top" secondItem="r95-kK-g7T" secondAttribute="bottom" constant="40" id="EhP-2X-qbG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uMP-H9-eJN" secondAttribute="trailing" constant="17" id="Flh-mw-Uce"/>
-                            <constraint firstItem="TFI-2O-pD7" firstAttribute="trailing" secondItem="s5R-aZ-uBk" secondAttribute="trailing" id="I1Q-qh-RLa"/>
-                            <constraint firstItem="uGn-rW-GGP" firstAttribute="leading" secondItem="FHJ-cf-ALg" secondAttribute="leading" id="JEz-e1-wQ6"/>
-                            <constraint firstItem="yyj-ab-ZKK" firstAttribute="top" secondItem="s5R-aZ-uBk" secondAttribute="bottom" constant="33" id="Nyd-DH-pqT"/>
-                            <constraint firstItem="s5R-aZ-uBk" firstAttribute="trailing" secondItem="yyj-ab-ZKK" secondAttribute="trailing" id="Ora-ke-X1L"/>
-                            <constraint firstItem="n3w-nu-n3E" firstAttribute="leading" secondItem="BiT-Tl-CJ3" secondAttribute="leadingMargin" constant="21" id="Q9J-ec-BEa"/>
-                            <constraint firstItem="TFI-2O-pD7" firstAttribute="leading" secondItem="s5R-aZ-uBk" secondAttribute="leading" id="XMn-fa-Rgt"/>
-                            <constraint firstItem="FHJ-cf-ALg" firstAttribute="trailing" secondItem="TFI-2O-pD7" secondAttribute="trailing" id="dps-b5-aDl"/>
-                            <constraint firstItem="r95-kK-g7T" firstAttribute="leading" secondItem="uGn-rW-GGP" secondAttribute="leading" id="gfh-hX-gZb"/>
-                            <constraint firstItem="n3w-nu-n3E" firstAttribute="top" secondItem="jUg-xs-0MG" secondAttribute="bottom" constant="92" id="hQP-bc-j7w"/>
-                            <constraint firstItem="PIx-VT-ZiP" firstAttribute="top" secondItem="uMP-H9-eJN" secondAttribute="bottom" constant="29" id="kRI-Es-Q42"/>
-                            <constraint firstItem="TFI-2O-pD7" firstAttribute="top" secondItem="FHJ-cf-ALg" secondAttribute="bottom" constant="29" id="krb-2H-X0e"/>
-                            <constraint firstItem="uGn-rW-GGP" firstAttribute="trailing" secondItem="FHJ-cf-ALg" secondAttribute="trailing" id="lED-TP-0fg"/>
-                            <constraint firstItem="FHJ-cf-ALg" firstAttribute="top" secondItem="uGn-rW-GGP" secondAttribute="bottom" constant="40" id="mOF-Ob-8oL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="n3w-nu-n3E" secondAttribute="trailing" constant="46" id="yGO-as-jHS"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.77647058823529413" green="0.92549019607843142" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="label_location" destination="n3w-nu-n3E" id="OcL-Gd-3Bt"/>
@@ -226,7 +758,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uk9-tf-Yxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="846" y="904"/>
+            <point key="canvasLocation" x="868" y="903.59820089955031"/>
         </scene>
         <!--예보-->
         <scene sceneID="E1X-FN-Pfn">
@@ -240,235 +772,223 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwS-XG-Vjj">
-                                <rect key="frame" x="16" y="309" width="74" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwS-XG-Vjj">
+                                <rect key="frame" x="48" y="340" width="93" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.6854119568" green="0.64546826420000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <string key="text">강수확률
 </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최저기온 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCl-E4-erH">
-                                <rect key="frame" x="117" y="309" width="74" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="최저기온 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCl-E4-erH">
+                                <rect key="frame" x="141" y="341" width="93" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.5599399773" green="0.72209976949999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRA-IB-8x4">
-                                <rect key="frame" x="217" y="309" width="74" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRA-IB-8x4">
+                                <rect key="frame" x="234" y="340" width="93" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.6854119568" green="0.64546826420000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">최고기온
 </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강수량 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-AD-ND4">
-                                <rect key="frame" x="16" y="217" width="74" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="강수량 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-AD-ND4">
+                                <rect key="frame" x="48" y="275" width="93" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.5599399773" green="0.72209976949999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="적설량 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLi-I7-k9p">
-                                <rect key="frame" x="117" y="217" width="74" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="적설량 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLi-I7-k9p">
+                                <rect key="frame" x="141" y="275" width="93" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.6854119568" green="0.64546826420000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="74" id="WA5-uo-9dF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="습도 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJn-29-9RL">
-                                <rect key="frame" x="217" y="217" width="74" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="습도 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJn-29-9RL">
+                                <rect key="frame" x="234" y="275" width="93" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.5599399773" green="0.72209976949999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강수형태 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNY-LF-as7">
-                                <rect key="frame" x="217" y="376" width="74" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="강수형태 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNY-LF-as7">
+                                <rect key="frame" x="48" y="405" width="93" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.5599399773" green="0.72209976949999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강수확률" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPA-zS-90z">
-                                <rect key="frame" x="16" y="337" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="풍향 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyG-b0-mcq">
+                                <rect key="frame" x="234" y="406" width="93" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.5599399773" green="0.72209976949999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강수형태" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07B-8Z-GKv">
-                                <rect key="frame" x="217" y="405" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="풍속 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMs-sd-REN">
+                                <rect key="frame" x="141" y="407" width="93" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.6854119568" green="0.64546826420000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6시간 강수량" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ov-Od-nXL">
-                                <rect key="frame" x="16" y="245" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="파고 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9K-kT-HgI">
+                                <rect key="frame" x="141" y="473" width="93" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.5599399773" green="0.72209976949999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="습도" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffp-qk-dWh">
-                                <rect key="frame" x="217" y="245" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="강수확률" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPA-zS-90z">
+                                <rect key="frame" x="48" y="369" width="93" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6시간 적설량" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YX4-0K-3YB">
-                                <rect key="frame" x="117" y="245" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="강수형태" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07B-8Z-GKv">
+                                <rect key="frame" x="48" y="435" width="93" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하늘날씨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8k-dQ-Q3q">
-                                <rect key="frame" x="16" y="128" width="74" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="74" id="7Z0-ae-VSp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6시간 강수량" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ov-Od-nXL">
+                                <rect key="frame" x="48" y="304" width="93" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아침 최저기온" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGe-Hq-ck3">
-                                <rect key="frame" x="117" y="338" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="습도" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffp-qk-dWh">
+                                <rect key="frame" x="234" y="304" width="93" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="낮 최고기온" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHf-WL-CBF">
-                                <rect key="frame" x="217" y="337" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6시간 적설량" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YX4-0K-3YB">
+                                <rect key="frame" x="141" y="304" width="93" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="풍향" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aju-UQ-XYl">
-                                <rect key="frame" x="16" y="405" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="아침 최저기온" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGe-Hq-ck3">
+                                <rect key="frame" x="141" y="369" width="93" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="풍속" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyb-SW-aXd">
-                                <rect key="frame" x="117" y="405" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="낮 최고기온" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHf-WL-CBF">
+                                <rect key="frame" x="235" y="369" width="92" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="풍향 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyG-b0-mcq">
-                                <rect key="frame" x="16" y="376" width="74" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="풍향" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aju-UQ-XYl">
+                                <rect key="frame" x="234" y="435" width="93" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="풍속 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMs-sd-REN">
-                                <rect key="frame" x="117" y="376" width="74" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="풍속" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyb-SW-aXd">
+                                <rect key="frame" x="141" y="435" width="93" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="파고 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9K-kT-HgI">
-                                <rect key="frame" x="16" y="458" width="74" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6G-L3-Tsg">
+                                <rect key="frame" x="48" y="246" width="143" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6G-L3-Tsg">
-                                <rect key="frame" x="16" y="84" width="143" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="143" id="MeH-L2-gSr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="파고" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsc-LR-5Se">
+                                <rect key="frame" x="141" y="509" width="93" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="파고" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsc-LR-5Se">
-                                <rect key="frame" x="16" y="487" width="74" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XM1-yU-Y1b">
+                                <rect key="frame" x="48" y="560" width="40" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="오늘">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressToday:" destination="FY7-lc-Fbb" eventType="touchUpInside" id="H2X-qI-vex"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="하늘날씨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8k-dQ-Q3q">
+                                <rect key="frame" x="154" y="197" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vS-kM-UTP">
+                                <rect key="frame" x="22" y="33" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="뒤로">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="kNX-vH-9Ie"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="날씨예보" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCa-qb-lrr">
+                                <rect key="frame" x="139" y="15" width="97" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQg-iD-DYp">
+                                <rect key="frame" x="287" y="560" width="40" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="내일">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressTomorrow:" destination="FY7-lc-Fbb" eventType="touchUpInside" id="55T-wV-ghR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="☀️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuN-YB-LK2">
+                                <rect key="frame" x="138" y="86" width="99" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="U6G-L3-Tsg" firstAttribute="leading" secondItem="t8k-dQ-Q3q" secondAttribute="leading" id="10a-3j-FTu"/>
-                            <constraint firstItem="EJn-29-9RL" firstAttribute="baseline" secondItem="Ffp-qk-dWh" secondAttribute="baseline" id="2ic-32-4Vb"/>
-                            <constraint firstItem="3ov-Od-nXL" firstAttribute="top" secondItem="t8k-dQ-Q3q" secondAttribute="bottom" constant="96" id="3Co-Ei-S33"/>
-                            <constraint firstItem="dNY-LF-as7" firstAttribute="trailing" secondItem="07B-8Z-GKv" secondAttribute="trailing" id="3W2-Rx-i8l"/>
-                            <constraint firstItem="qRA-IB-8x4" firstAttribute="trailing" secondItem="bHf-WL-CBF" secondAttribute="trailing" id="3gP-41-Qpv"/>
-                            <constraint firstItem="CLi-I7-k9p" firstAttribute="trailing" secondItem="YX4-0K-3YB" secondAttribute="trailing" id="3tl-MV-1b1"/>
-                            <constraint firstItem="U6G-L3-Tsg" firstAttribute="top" secondItem="Ivo-BS-t9y" secondAttribute="bottom" constant="20" id="4xY-mP-8uP"/>
-                            <constraint firstItem="pyb-SW-aXd" firstAttribute="baseline" secondItem="07B-8Z-GKv" secondAttribute="baseline" id="5lw-i3-6lF"/>
-                            <constraint firstItem="U6G-L3-Tsg" firstAttribute="leading" secondItem="esa-Ez-Q7H" secondAttribute="leadingMargin" id="9g4-pH-wdr"/>
-                            <constraint firstItem="kMs-sd-REN" firstAttribute="leading" secondItem="pyb-SW-aXd" secondAttribute="leading" id="A5L-8c-Gae"/>
-                            <constraint firstItem="UPA-zS-90z" firstAttribute="trailing" secondItem="cyG-b0-mcq" secondAttribute="trailing" id="ANk-aR-Rm8"/>
-                            <constraint firstItem="CLi-I7-k9p" firstAttribute="firstBaseline" secondItem="EJn-29-9RL" secondAttribute="firstBaseline" id="BAk-eX-WyG"/>
-                            <constraint firstItem="aju-UQ-XYl" firstAttribute="top" secondItem="wwS-XG-Vjj" secondAttribute="bottom" constant="46" id="BGN-kr-uug"/>
-                            <constraint firstItem="qRA-IB-8x4" firstAttribute="leading" secondItem="bHf-WL-CBF" secondAttribute="leading" id="BtV-1o-6U3"/>
-                            <constraint firstItem="Ffp-qk-dWh" firstAttribute="leading" secondItem="qRA-IB-8x4" secondAttribute="leading" id="DdT-Tv-Hrr"/>
-                            <constraint firstItem="wwS-XG-Vjj" firstAttribute="leading" secondItem="UPA-zS-90z" secondAttribute="leading" id="Ds4-6O-bXo"/>
-                            <constraint firstItem="fsc-LR-5Se" firstAttribute="top" secondItem="cyG-b0-mcq" secondAttribute="bottom" constant="61" id="FBJ-Vq-pcG"/>
-                            <constraint firstItem="TCl-E4-erH" firstAttribute="firstBaseline" secondItem="qRA-IB-8x4" secondAttribute="firstBaseline" id="FHD-Rs-Z7v"/>
-                            <constraint firstItem="t8k-dQ-Q3q" firstAttribute="trailing" secondItem="iAd-AD-ND4" secondAttribute="trailing" id="GCa-qi-mCY"/>
-                            <constraint firstItem="UPA-zS-90z" firstAttribute="baseline" secondItem="TCl-E4-erH" secondAttribute="baseline" id="GeO-bU-WNj"/>
-                            <constraint firstItem="TCl-E4-erH" firstAttribute="baseline" secondItem="bHf-WL-CBF" secondAttribute="baseline" id="JPJ-1C-qYt"/>
-                            <constraint firstItem="aju-UQ-XYl" firstAttribute="baseline" secondItem="kMs-sd-REN" secondAttribute="baseline" id="JlH-fD-qHO"/>
-                            <constraint firstItem="iAd-AD-ND4" firstAttribute="top" secondItem="t8k-dQ-Q3q" secondAttribute="bottom" constant="68" id="KMW-gJ-dte"/>
-                            <constraint firstItem="a9K-kT-HgI" firstAttribute="top" secondItem="cyG-b0-mcq" secondAttribute="bottom" constant="32" id="KPT-V0-pIy"/>
-                            <constraint firstItem="UPA-zS-90z" firstAttribute="leading" secondItem="cyG-b0-mcq" secondAttribute="leading" id="L7K-W7-ijV"/>
-                            <constraint firstItem="cyG-b0-mcq" firstAttribute="trailing" secondItem="aju-UQ-XYl" secondAttribute="trailing" id="L8Y-dj-hYY"/>
-                            <constraint firstItem="TCl-E4-erH" firstAttribute="leading" secondItem="zGe-Hq-ck3" secondAttribute="leading" id="MCT-RN-xEV"/>
-                            <constraint firstItem="3ov-Od-nXL" firstAttribute="leading" secondItem="UPA-zS-90z" secondAttribute="leading" id="NN2-EA-ab4"/>
-                            <constraint firstItem="t8k-dQ-Q3q" firstAttribute="leading" secondItem="3ov-Od-nXL" secondAttribute="leading" id="Onl-MI-r23"/>
-                            <constraint firstItem="iAd-AD-ND4" firstAttribute="trailing" secondItem="3ov-Od-nXL" secondAttribute="trailing" id="QrX-sP-Uxc"/>
-                            <constraint firstItem="cyG-b0-mcq" firstAttribute="top" secondItem="wwS-XG-Vjj" secondAttribute="bottom" constant="17" id="Ryp-wq-sHf"/>
-                            <constraint firstItem="wwS-XG-Vjj" firstAttribute="centerY" secondItem="esa-Ez-Q7H" secondAttribute="centerY" id="WDi-SN-anY"/>
-                            <constraint firstItem="iAd-AD-ND4" firstAttribute="firstBaseline" secondItem="CLi-I7-k9p" secondAttribute="firstBaseline" id="WRb-mg-eeC"/>
-                            <constraint firstItem="aju-UQ-XYl" firstAttribute="leading" secondItem="fsc-LR-5Se" secondAttribute="leading" id="Wgw-kS-ezJ"/>
-                            <constraint firstItem="aju-UQ-XYl" firstAttribute="baseline" secondItem="cyG-b0-mcq" secondAttribute="baseline" id="Xxp-M6-HyE"/>
-                            <constraint firstItem="YX4-0K-3YB" firstAttribute="baseline" secondItem="CLi-I7-k9p" secondAttribute="baseline" id="XyY-6w-l77"/>
-                            <constraint firstItem="bHf-WL-CBF" firstAttribute="leading" secondItem="dNY-LF-as7" secondAttribute="leading" id="YA8-7V-h5J"/>
-                            <constraint firstItem="wwS-XG-Vjj" firstAttribute="baseline" secondItem="zGe-Hq-ck3" secondAttribute="baseline" id="Z3L-yS-xvo"/>
-                            <constraint firstItem="iAd-AD-ND4" firstAttribute="baseline" secondItem="3ov-Od-nXL" secondAttribute="baseline" id="ZVn-DN-je6"/>
-                            <constraint firstItem="EJn-29-9RL" firstAttribute="leading" secondItem="Ffp-qk-dWh" secondAttribute="leading" id="aC6-zL-u0r"/>
-                            <constraint firstItem="YX4-0K-3YB" firstAttribute="trailing" secondItem="TCl-E4-erH" secondAttribute="trailing" id="aCv-Jn-xJx"/>
-                            <constraint firstItem="kMs-sd-REN" firstAttribute="firstBaseline" secondItem="dNY-LF-as7" secondAttribute="firstBaseline" id="bQC-zr-dh3"/>
-                            <constraint firstItem="YX4-0K-3YB" firstAttribute="baseline" secondItem="Ffp-qk-dWh" secondAttribute="baseline" id="bgG-fo-b8G"/>
-                            <constraint firstItem="TCl-E4-erH" firstAttribute="trailing" secondItem="zGe-Hq-ck3" secondAttribute="trailing" id="caU-zP-swo"/>
-                            <constraint firstItem="Ffp-qk-dWh" firstAttribute="trailing" secondItem="qRA-IB-8x4" secondAttribute="trailing" id="caV-YV-E5k"/>
-                            <constraint firstItem="wwS-XG-Vjj" firstAttribute="centerY" secondItem="TCl-E4-erH" secondAttribute="centerY" id="dYN-vl-Xuy"/>
-                            <constraint firstItem="cyG-b0-mcq" firstAttribute="firstBaseline" secondItem="kMs-sd-REN" secondAttribute="firstBaseline" id="duH-Lw-LZs"/>
-                            <constraint firstItem="t8k-dQ-Q3q" firstAttribute="top" secondItem="U6G-L3-Tsg" secondAttribute="bottom" constant="23" id="fEA-oA-3js"/>
-                            <constraint firstItem="pyb-SW-aXd" firstAttribute="baseline" secondItem="kMs-sd-REN" secondAttribute="baseline" id="fFp-b0-sB4"/>
-                            <constraint firstItem="Ffp-qk-dWh" firstAttribute="leading" secondItem="YX4-0K-3YB" secondAttribute="trailing" constant="26" id="fFq-ZE-1Sv"/>
-                            <constraint firstItem="aju-UQ-XYl" firstAttribute="trailing" secondItem="fsc-LR-5Se" secondAttribute="trailing" id="flh-pE-20h"/>
-                            <constraint firstItem="YX4-0K-3YB" firstAttribute="leading" secondItem="3ov-Od-nXL" secondAttribute="trailing" constant="27" id="gsE-qe-KPD"/>
-                            <constraint firstItem="dNY-LF-as7" firstAttribute="baseline" secondItem="07B-8Z-GKv" secondAttribute="baseline" id="hCm-PH-li1"/>
-                            <constraint firstItem="wwS-XG-Vjj" firstAttribute="firstBaseline" secondItem="TCl-E4-erH" secondAttribute="firstBaseline" id="hWq-jQ-rdI"/>
-                            <constraint firstItem="qRA-IB-8x4" firstAttribute="baseline" secondItem="bHf-WL-CBF" secondAttribute="baseline" id="j96-St-UXF"/>
-                            <constraint firstItem="zGe-Hq-ck3" firstAttribute="trailing" secondItem="pyb-SW-aXd" secondAttribute="trailing" id="jf1-RM-zWT"/>
-                            <constraint firstItem="a9K-kT-HgI" firstAttribute="baseline" secondItem="fsc-LR-5Se" secondAttribute="baseline" id="jwp-4B-02f"/>
-                            <constraint firstItem="bHf-WL-CBF" firstAttribute="trailing" secondItem="dNY-LF-as7" secondAttribute="trailing" id="kdK-YY-wWe"/>
-                            <constraint firstItem="CLi-I7-k9p" firstAttribute="leading" secondItem="YX4-0K-3YB" secondAttribute="leading" id="l9C-GY-yey"/>
-                            <constraint firstItem="UPA-zS-90z" firstAttribute="top" secondItem="3ov-Od-nXL" secondAttribute="bottom" constant="71" id="lEZ-Pg-czO"/>
-                            <constraint firstItem="iAd-AD-ND4" firstAttribute="leading" secondItem="3ov-Od-nXL" secondAttribute="leading" id="lry-MM-3GP"/>
-                            <constraint firstItem="dNY-LF-as7" firstAttribute="leading" secondItem="07B-8Z-GKv" secondAttribute="leading" id="pIo-Ea-C5T"/>
-                            <constraint firstItem="a9K-kT-HgI" firstAttribute="trailing" secondItem="fsc-LR-5Se" secondAttribute="trailing" id="pkK-jw-v8m"/>
-                            <constraint firstItem="EJn-29-9RL" firstAttribute="trailing" secondItem="Ffp-qk-dWh" secondAttribute="trailing" id="qKI-eb-8TU"/>
-                            <constraint firstItem="cyG-b0-mcq" firstAttribute="leading" secondItem="aju-UQ-XYl" secondAttribute="leading" id="qge-eA-tQZ"/>
-                            <constraint firstItem="3ov-Od-nXL" firstAttribute="trailing" secondItem="UPA-zS-90z" secondAttribute="trailing" id="r0A-E4-4BX"/>
-                            <constraint firstItem="kMs-sd-REN" firstAttribute="trailing" secondItem="pyb-SW-aXd" secondAttribute="trailing" id="rN4-Cc-vim"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EJn-29-9RL" secondAttribute="trailing" constant="68" id="tCJ-pf-4Oi"/>
-                            <constraint firstItem="YX4-0K-3YB" firstAttribute="leading" secondItem="TCl-E4-erH" secondAttribute="leading" id="uVO-zT-JQA"/>
-                            <constraint firstItem="a9K-kT-HgI" firstAttribute="leading" secondItem="fsc-LR-5Se" secondAttribute="leading" id="v5e-57-15S"/>
-                            <constraint firstItem="iAd-AD-ND4" firstAttribute="baseline" secondItem="CLi-I7-k9p" secondAttribute="baseline" id="yLw-aq-vcQ"/>
-                            <constraint firstItem="wwS-XG-Vjj" firstAttribute="trailing" secondItem="UPA-zS-90z" secondAttribute="trailing" id="ydb-3b-DSv"/>
-                            <constraint firstItem="zGe-Hq-ck3" firstAttribute="leading" secondItem="kMs-sd-REN" secondAttribute="leading" id="zEB-6P-QNi"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.77647058823529413" green="0.92549019607843142" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="Date" destination="U6G-L3-Tsg" id="hqp-je-Xsf"/>
@@ -483,6 +1003,7 @@
                         <outlet property="label_VEC" destination="aju-UQ-XYl" id="Acn-SQ-LVq"/>
                         <outlet property="label_WAV" destination="fsc-LR-5Se" id="2py-2l-U81"/>
                         <outlet property="label_WSD" destination="pyb-SW-aXd" id="SBI-jB-4PR"/>
+                        <outlet property="weather_label" destination="IuN-YB-LK2" id="uDZ-lQ-Opb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfC-kM-u0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -501,64 +1022,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="91s-FJ-61O">
-                                <rect key="frame" x="0.0" y="109" width="375" height="516"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="91s-FJ-61O">
+                                <rect key="frame" x="0.0" y="54" width="375" height="516"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pcx-MR-wND">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pcx-MR-wND">
                                 <rect key="frame" x="61" y="629" width="252" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="SliderValueChanged:" destination="93X-ud-S05" eventType="valueChanged" id="eyN-sr-2iv"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4K4-IN-fl5">
-                                <rect key="frame" x="319" y="634" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4K4-IN-fl5">
+                                <rect key="frame" x="319" y="633.5" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0d-5H-gJ0">
-                                <rect key="frame" x="187" y="64" width="188" height="46"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="188" id="1TF-to-LsF"/>
-                                </constraints>
-                                <state key="normal" title="오늘"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0d-5H-gJ0">
+                                <rect key="frame" x="187" y="569" width="188" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="오늘">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="TodayClick:" destination="93X-ud-S05" eventType="touchUpInside" id="gw1-ar-lfb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtz-wY-k4o">
-                                <rect key="frame" x="0.0" y="64" width="188" height="46"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="188" id="cos-wb-MrF"/>
-                                    <constraint firstAttribute="height" constant="46" id="pL9-BI-FtB"/>
-                                </constraints>
-                                <state key="normal" title="어제"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtz-wY-k4o">
+                                <rect key="frame" x="0.0" y="569" width="188" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="어제">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="YesterdayClick:" destination="93X-ud-S05" eventType="touchUpInside" id="Tfx-2N-YMe"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="위성영상" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98r-7W-vuI">
+                                <rect key="frame" x="129" y="17" width="116" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqA-2I-MGV">
+                                <rect key="frame" x="23" y="20" width="39" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="17"/>
+                                <state key="normal" title="뒤로">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="kx0-Ji-sNO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Dtz-wY-k4o" firstAttribute="leading" secondItem="91s-FJ-61O" secondAttribute="leading" id="DQd-xA-Ta8"/>
-                            <constraint firstItem="Dtz-wY-k4o" firstAttribute="baseline" secondItem="H0d-5H-gJ0" secondAttribute="firstBaseline" id="OCL-Pr-sGV"/>
-                            <constraint firstItem="pcx-MR-wND" firstAttribute="top" secondItem="91s-FJ-61O" secondAttribute="bottom" constant="4" id="PTF-UL-1o1"/>
-                            <constraint firstItem="Dtz-wY-k4o" firstAttribute="top" secondItem="4hX-Cn-rRr" secondAttribute="bottom" id="VZQ-Zk-bZa"/>
-                            <constraint firstAttribute="trailing" secondItem="H0d-5H-gJ0" secondAttribute="trailing" id="f7Z-q8-EiS"/>
-                            <constraint firstItem="kHM-5N-M4k" firstAttribute="top" secondItem="pcx-MR-wND" secondAttribute="bottom" constant="8" symbolic="YES" id="ge5-rW-OM2"/>
-                            <constraint firstItem="H0d-5H-gJ0" firstAttribute="baseline" secondItem="Dtz-wY-k4o" secondAttribute="firstBaseline" id="hPW-hO-6c6"/>
-                            <constraint firstItem="H0d-5H-gJ0" firstAttribute="trailing" secondItem="91s-FJ-61O" secondAttribute="trailing" id="mzz-dU-JVJ"/>
-                            <constraint firstItem="91s-FJ-61O" firstAttribute="centerX" secondItem="pcx-MR-wND" secondAttribute="centerX" id="ogB-qk-YFm"/>
-                            <constraint firstItem="pcx-MR-wND" firstAttribute="leading" secondItem="MXh-lR-aUm" secondAttribute="leadingMargin" constant="47" id="r4u-vX-fYo"/>
-                            <constraint firstItem="4K4-IN-fl5" firstAttribute="leading" secondItem="pcx-MR-wND" secondAttribute="trailing" constant="8" symbolic="YES" id="thJ-gw-GXK"/>
-                            <constraint firstItem="Dtz-wY-k4o" firstAttribute="leading" secondItem="MXh-lR-aUm" secondAttribute="leading" id="vTg-6J-gJs"/>
-                            <constraint firstItem="pcx-MR-wND" firstAttribute="centerY" secondItem="4K4-IN-fl5" secondAttribute="centerY" id="xcH-Mv-mDS"/>
-                            <constraint firstItem="Dtz-wY-k4o" firstAttribute="top" secondItem="H0d-5H-gJ0" secondAttribute="top" id="xip-PO-GzA"/>
-                            <constraint firstItem="91s-FJ-61O" firstAttribute="top" secondItem="4hX-Cn-rRr" secondAttribute="bottom" constant="45" id="yx7-5K-d97"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="91s-FJ-61O" id="JAp-RM-XES"/>
@@ -573,9 +1100,10 @@
         <!--Navigation Controller-->
         <scene sceneID="AhL-4s-W5R">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tVs-Sy-qbk" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="tVs-Sy-qbk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kWT-DC-iZX">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="kWT-DC-iZX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -591,5 +1119,9 @@
     </scenes>
     <resources>
         <image name="Korea.png" width="400" height="377"/>
+        <image name="frame.png" width="320" height="320"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="B1x-AK-eCn"/>
+    </inferredMetricsTieBreakers>
 </document>

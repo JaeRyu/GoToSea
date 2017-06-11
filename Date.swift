@@ -64,6 +64,34 @@ func ChangeDateFromString(string : String) ->String{
     str.append("일 ")
     
     return str
+}
+
+func GetMonth(string: String) -> Int{
+    var mstr = string
+    mstr.characters.popFirst()
+    mstr.characters.popFirst()
+    mstr.characters.popFirst()
+    mstr.characters.popFirst()
     
+    var str = ""
+    str.append(mstr.characters.popFirst()!)
+    str.append(mstr.characters.popFirst()!)
+    
+    return Int(str)!
+}
+
+func GetDay(string: String) -> Int{
+    var mstr = string
+    mstr.characters.popFirst()
+    mstr.characters.popFirst()
+    mstr.characters.popFirst()
+    mstr.characters.popFirst()
+    mstr.characters.popFirst()
+    mstr.characters.popFirst()
+    var str = ""
+    
+    str.append(mstr.characters.popFirst()!)
+    str.append(mstr.characters.popFirst()!)
+    return Int(str)!
     
 }

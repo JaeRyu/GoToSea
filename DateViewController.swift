@@ -55,13 +55,13 @@ class DateViewController: UIViewController, XMLParserDelegate {
         parser = XMLParser(contentsOf: URL(string: url!)!)!
         parser.delegate = self
         parser.parse()
-        label_location.text = "지역 : \((posts.object(at: 0) as AnyObject).value(forKey: "location") as! NSString as String)"
-        label_sunrise.text = "일출 : \(ChangeTimeFromString(string: (posts.object(at: 0) as AnyObject).value(forKey: "sunrise") as! NSString as String))"
-        label_sunset.text = "일몰 : \(ChangeTimeFromString(string: (posts.object(at: 0) as AnyObject).value(forKey: "sunset") as! NSString as String))"
-        label_moonrise.text = "월출 : \(ChangeTimeFromString(string: (posts.object(at: 0) as AnyObject).value(forKey: "moonrise") as! NSString as String))"
-        label_moonset.text = "월몰 : \(ChangeTimeFromString(string: (posts.object(at: 0) as AnyObject).value(forKey: "moonset") as! NSString as String))"
-        label_nautm.text = "항해박명(아침) : \(ChangeTimeFromString(string: (posts.object(at: 0) as AnyObject).value(forKey: "nautm") as! NSString as String))"
-        label_naute.text = "항해박명(저녁) : \(ChangeTimeFromString(string: (posts.object(at: 0) as AnyObject).value(forKey: "naute") as! NSString as String))"
+        label_location.text = "\((posts.object(at: 0) as AnyObject).value(forKey: "location") as! NSString as String)"
+        label_sunrise.text = "\(ChangeTimeFromString(string: (posts.object(at: 0) as AnyObject).value(forKey: "sunrise") as! NSString as String))"
+        label_sunset.text = "\(ChangeTimeFromString(string: (posts.object(at: 0) as AnyObject).value(forKey: "sunset") as! NSString as String))"
+        label_moonrise.text = "\(ChangeTimeFromString(string: (posts.object(at: 0) as AnyObject).value(forKey: "moonrise") as! NSString as String))"
+        label_moonset.text = "\(ChangeTimeFromString(string: (posts.object(at: 0) as AnyObject).value(forKey: "moonset") as! NSString as String))"
+        label_nautm.text = "\(ChangeTimeFromString(string: (posts.object(at: 0) as AnyObject).value(forKey: "nautm") as! NSString as String))"
+        label_naute.text = "\(ChangeTimeFromString(string: (posts.object(at: 0) as AnyObject).value(forKey: "naute") as! NSString as String))"
     }
 
     
@@ -172,6 +172,52 @@ class DateViewController: UIViewController, XMLParserDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    var strX = ""
+    var strY = ""
+    var RE = 6371.00877; // 지구 반경(km)
+    var GRID = 5.0; // 격자 간격(km)
+    var SLAT1 = 30.0; // 투영 위도1(degree)
+    var SLAT2 = 60.0; // 투영 위도2(degree)
+    var OLON = 126.0; // 기준점 경도(degree)
+    var OLAT = 38.0; // 기준점 위도(degree)
+    var XO = 43; // 기준점 X좌표(GRID)
+    var YO = 136; // 기1준점 Y좌표(GRID)
+    let PI = 3.14159265358979
+    func MakeXY(lat: Double, long: Double ){
+        var DEGRAD = PI / 180.0;
+        var RADDEG = 180.0 / PI;
+        
+        var re = RE / GRID;
+        var slat1 = SLAT1 * DEGRAD;
+        var slat2 = SLAT2 * DEGRAD;
+        var olon = OLON * DEGRAD;
+        var olat = OLAT * DEGRAD;
+        
+        var sn = tan(PI * 0.25 + slat2 * 0.5) / tan(PI * 0.25 + slat1 * 0.5);
+        sn = log(cos(slat1) / cos(slat2)) / log(sn);
+        var sf = tan(PI * 0.25 + slat1 * 0.5);
+        sf = pow(sf, sn) * cos(slat1) / sn;
+        var ro = tan(PI * 0.25 + olat * 0.5);
+        ro = re * sf / pow(ro, sn);
+        
+        //strX = String(lat);
+        //strY = long;
+        var ra = tan(PI * 0.25 + (lat) * DEGRAD * 0.5);
+        ra = re * sf / pow(ra, sn);
+        var theta = long * DEGRAD - olon;
+        if (theta > PI)
+        {
+         theta -= 2.0 * PI;
+        }
+        if (theta < -PI){
+         theta += 2.0 * PI;
+        }
+        theta *= sn;
+        
+        strX = String(floor(ra * sin(theta) + Double(XO) + 0.5));
+        strY = String(floor(ro - ra * cos(theta) + Double(YO) + 0.5));
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if(segue.identifier == "showForecast")
@@ -182,16 +228,41 @@ class DateViewController: UIViewController, XMLParserDelegate {
                 nx = (posts.object(at: 0) as AnyObject).value(forKey: "latitude") as! NSString as String
                 ny = (posts.object(at: 0) as AnyObject).value(forKey: "longitude") as! NSString as String
                 
-                nx.characters.popLast()
-                nx.characters.popLast()
                 
-                ny.characters.popLast()
-                ny.characters.popLast()
                 
-               // print("nx: " + nx + ", ny: " + ny)
+                var tx = nx
+                var ty = ny
+                var x = ""
+                var y = ""
                 
-                forecastView.nx = nx
-                forecastView.ny = ny
+                
+                x.append(tx.characters.popFirst()!)
+                x.append(tx.characters.popFirst()!)
+                x.append(".")
+                x.append(tx.characters.popFirst()!)
+                x.append(tx.characters.popFirst()!)
+                
+                y.append(ty.characters.popFirst()!)
+                y.append(ty.characters.popFirst()!)
+                y.append(ty.characters.popFirst()!)
+                y.append(".")
+                y.append(ty.characters.popFirst()!)
+                y.append(ty.characters.popFirst()!)
+                
+                MakeXY(lat: Double(x)!, long: Double(y)!)
+                print("nx: " + strX + ", ny: " + strY)
+                
+                
+                strX.characters.popLast()
+                strX.characters.popLast()
+                
+                strY.characters.popLast()
+                strY.characters.popLast()
+                
+                
+                
+                forecastView.nx = strX
+                forecastView.ny = strY
                 
                 
                 forecastView.DateString = dateString
