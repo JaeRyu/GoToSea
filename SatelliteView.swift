@@ -129,6 +129,14 @@ class SatelliteView: UIViewController, XMLParserDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if(segue.identifier == "GoBack")
+        {
+            imageView.removeFromSuperview()
+        }
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
 
     /*
     // MARK: - Navigation
